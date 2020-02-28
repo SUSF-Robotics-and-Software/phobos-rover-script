@@ -1,0 +1,30 @@
+{
+    "name": "phobos-rover-script",
+    "displayName": "Phobos Rover Script",
+    "description": "Syntax highlighting and language support for the Phobos Rover Script language",
+    "version": "0.1.0",
+    "author": {"name": "Duncan Hamill", "email": "duncanrhamill@googlemail.com"},
+    "publisher": "SUSFSoftwareandElectronics",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "prs",
+            "aliases": ["Phobos Rover Script", "prs"],
+            "extensions": [".prs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "prs",
+            "scopeName": "source.prs",
+            "path": "./syntaxes/prs.tmLanguage.json",
+            "embeddedLanguages": {
+                "meta.embedded.block.json": "json"
+            }
+        }]
+    }
+}

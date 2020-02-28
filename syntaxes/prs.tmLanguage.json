@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Phobos Rover Script",
+	"patterns": [
+		{
+			"include": "#command"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"comment": {
+			"match": "^\\s*#[^\n]*",
+			"name": "comment.line"
+		},
+		"command": {
+			"patterns": [
+				{"include": "#exec-time"},
+				{"include": "#payload"}
+			]
+		},
+		"exec-time": {
+			"match": "^\\s*(\\d+(\\.\\d+)?)",
+			"name": "constant.numeric"
+		},
+		"payload": {
+			"begin": ":",
+			"end": ";",
+			"name": "meta.embedded.block.json",
+			"patterns": [
+				{
+					"include": "source.json"
+				}
+			]
+		}
+	},
+	"scopeName": "source.prs"
+}
