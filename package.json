@@ -5,6 +5,7 @@
     "version": "0.1.0",
     "author": {"name": "Duncan Hamill", "email": "duncanrhamill@googlemail.com"},
     "publisher": "SUSFSoftwareandElectronics",
+    "repository": {"url": "https://github.com/SUSF-Robotics-and-Software/phobos-rover-script"},
     "engines": {
         "vscode": "^1.42.0"
     },
